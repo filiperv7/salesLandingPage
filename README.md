@@ -1,2 +1,1 @@
-# salesLandingPage
-Landing Page de Vendas de um curso de Programação
+# Landing Page de Vendas de um curso de Programação
