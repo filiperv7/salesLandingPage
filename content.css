@@ -1,0 +1,166 @@
+#content {
+    flex-direction: column;
+    align-items: start;
+}
+
+#content > div {
+    max-width: 60%;
+}
+
+#content h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+#content h3.description {
+    font-size: 1.8rem;
+}
+
+#content .cards {
+    margin: 2rem auto 0;
+
+    display: grid;
+
+    gap: 1rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.card {
+    background-color: transparent;
+    width: 20rem;
+    height: 20rem;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+.card:hover {
+    animation: float ease-in-out 2s infinite;
+}
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, -5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.flipCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    color: var(--textColorDefault);
+}
+
+.flip .flipCard {
+    transform: rotateY(180deg);
+}
+
+.flipCard .text {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    text-align: center;
+    font-weight: 700;
+    
+    z-index: 9;
+}
+
+.flipCardFront, .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flipCardFront .text {
+    background-color: #f55f449d;
+    box-shadow: inset 8px 8px 10px var(--shadowColor), inset -8px -8px 14px var(--shadowColor);
+
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.flipCardBack {
+    background-color: var(--colorPrimary);
+    
+    transform: rotateY(180deg);
+    
+    padding: 1.4rem;
+}
+
+.flipCardBack p {
+    font-size: 1.2rem;
+}
+
+.cards img {
+    position: absolute;
+ 
+    filter: blur(2px);
+}
+
+.first img {
+    height: 14rem;
+}
+
+.first img.css {
+    margin-top: -2rem;
+}
+
+.first img.html {
+    margin-top: 3rem;
+    margin-left: 6rem;
+}
+
+.second img.google {
+    height: 12rem;
+    
+    margin-left: 4.2rem;
+}
+
+.third img.ux {
+    height: 12rem;
+
+    margin-left: 3.7rem;
+}
+
+.fourth img.javascript {
+    height: 16rem;
+
+    margin-left: 4.5rem;
+}
+
+.fifth img.node {
+    height: 14rem;
+
+    margin-left: 3rem;
+}
+
+.sixth img.banco {
+    height: 13rem;
+
+    margin-left: 3.5rem;
+}

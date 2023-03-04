@@ -12,6 +12,8 @@
     --colorSecundary: #1d5fee;
     --colorTerceary: #f55f44;
 
+    --shadowColor: #f55f315d;
+
     --textColorDefault: #ffffff;
     --backgroundColor: #e2e8e8d5;
     --backgroundColorBody: #f5f2f2;
@@ -26,7 +28,7 @@ body {
     justify-content: center;
     
     font-family: 'Poppins', sans-serif;
-    color: #000;
+    color: var(--colorPrimary);
     background-color: var(--backgroundColorBody); 
 }
 
@@ -106,7 +108,7 @@ li a {
 }
 
 div.sections {
-    margin-top: 4.367rem;
+    margin-top: 4.4rem;
 }
 
 main section {
@@ -115,11 +117,11 @@ main section {
     align-items: center;
     
     padding: 2rem 6rem;
-    min-height: 50rem;
+    min-height: 52rem;
 }
 
 section:target {
-    scroll-margin-top: 2rem;
+    scroll-margin-top: 3rem;
 }
 
 main section#presentation {
@@ -175,4 +177,3 @@ main section#presentation > img {
 .register a {
     color: var(--textColorDefault);
 }
-
