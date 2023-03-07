@@ -1,4 +1,9 @@
 #content {
+    --shadowColor: #f55f315d;
+    --colorCard: #f55f449d;
+}
+
+#content {
     flex-direction: column;
     align-items: start;
 }
@@ -97,7 +102,7 @@
 }
 
 .flipCardFront .text {
-    background-color: #f55f449d;
+    background-color: var(--colorCard);
     box-shadow: inset 8px 8px 10px var(--shadowColor), inset -8px -8px 14px var(--shadowColor);
 
     font-size: 2rem;
