@@ -105,8 +105,13 @@ li {
     list-style: none;
 }
 
-li a {
+nav li a {
     color: var(--textColorDefault);
+
+    transition: color .5s;
+}
+nav li a:hover {
+   color: var(--colorTerceary);
 }
 
 div.sections {
