@@ -49,3 +49,25 @@ document.querySelector('.modulesContainer').addEventListener('click', (event) =>
         module.closest('div.module').children[1].classList.toggle('hidden')
     }  
 })
+
+
+// ================ Questions ================ //
+
+document.querySelector('.questionsContainer').addEventListener('click', (event) => {
+    const question = event.target
+
+    console.log(question.closest('div.question').closest('div.questionContainer'));
+
+    const questionscontainer = document.querySelectorAll('.questionContainer')
+
+    questionscontainer.forEach(question => {
+        if (!question.classList.contains('.hideResponse')) {
+                question.classList.add('hideResponse')
+        }
+    })
+    
+    if (question.classList.contains('question') || question.closest('div.question')) {
+        question.closest('div.question').closest('div.questionContainer').classList.remove('hideResponse')
+    }
+})
+
