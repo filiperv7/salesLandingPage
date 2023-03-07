@@ -13,10 +13,12 @@
     --colorTerceary: #f55f44;
 
     --shadowColor: #f55f315d;
-
+    --shadowModule: #471b70;
+    
     --textColorDefault: #ffffff;
     --backgroundColor: #e2e8e8d5;
     --backgroundColorBody: #f5f2f2;
+    --backgroundModule: #7b1bd4;
 }
 
 html {

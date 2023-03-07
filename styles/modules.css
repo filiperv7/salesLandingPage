@@ -1,0 +1,82 @@
+#modules, .modulesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    width: 100%;
+}
+
+#modules h2 {
+    font-size: 2.8rem;
+
+    margin-bottom: 1.4rem;
+}
+
+.modulesContainer {
+    align-items: center;
+    
+    gap: 1.6rem;
+}
+
+.modulesContainer .module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 96%;
+}
+
+.modulesContainer .module .hidden {
+    max-height: 0;
+}
+
+.modulesContainer .moduleTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    z-index: 1;
+    
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    
+    background-color: var(--backgroundModule);
+    
+    font-size: 1.7rem;
+    
+    cursor: pointer;
+    transition: box-shadow .7s linear;
+}
+.modulesContainer .shadow,
+.moduleTitle:hover {
+    box-shadow: 0 2px 14px var(--shadowModule);
+}
+
+.moduleTitle i.ph-caret-down {
+    transform: rotate(-90deg);
+}
+
+.contentModule {
+    width: 98%;
+    margin-top: -.5rem;
+    max-height: 500px;
+    
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    
+    background-color: var(--backgroundModule);
+    
+    transition: max-height .7s linear;
+}
+
+.contentModule ul {
+    padding: 1rem 2rem;
+
+    color: var(--textColorDefault);
+}
+
+.contentModule ul li {
+    font-weight: 500;
+}

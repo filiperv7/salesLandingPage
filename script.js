@@ -19,18 +19,33 @@ document.addEventListener('scroll', () => {
 })
 
 
+// ================ Content ================ //
+
 const cardContainer = document.querySelector('.cards')
 
 cardContainer.addEventListener('click', (event) => {
     const card = event.composedPath()[3]
-
+    
     if (card.classList.contains('card')){
         card.classList.toggle('flip')
     }
-
+    
     if (card.classList.contains('flipCard')) {
         var parent = card.parentNode
-
+        
         parent.classList.toggle('flip')
     }
+})
+
+
+// ================ Modules ================ //
+
+document.querySelector('.modulesContainer').addEventListener('click', (event) => {
+    const module = event.target
+
+    if (module.classList.contains('module') || module.closest('div.module')){
+        module.closest('div.module').children[0].classList.toggle('shadow')
+        
+        module.closest('div.module').children[1].classList.toggle('hidden')
+    }  
 })
