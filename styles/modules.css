@@ -59,7 +59,10 @@
     box-shadow: 0 2px 14px var(--shadowModule);
 }
 
-.moduleTitle i.ph-caret-down {
+i.ph-caret-down {
+    transition: transform .5s;
+}
+.module:has(.hidden) i.ph-caret-down {
     transform: rotate(-90deg);
 }
 
