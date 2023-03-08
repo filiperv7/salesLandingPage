@@ -30,6 +30,10 @@ body {
     background-color: var(--backgroundColorBody); 
 }
 
+body:has(#popUpContainer.show) {
+    overflow: hidden;
+}
+
 body::-webkit-scrollbar {
     width: 10px;
 }

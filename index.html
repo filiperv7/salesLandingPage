@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/modules.css">
     <link rel="stylesheet" href="./styles/register.css">
     <link rel="stylesheet" href="./styles/faq.css">
+    <link rel="stylesheet" href="./styles/popUp.css">
 
     <script src="https://unpkg.com/phosphor-icons"></script>
 
@@ -315,7 +316,7 @@
                         <li>E conteúdos extras.</li>
                     </ul>
                     
-                    <button>Aproveitar oportunidade</button>
+                    <button class="buttonRegister">Aproveitar oportunidade</button>
                 </div>
             </section>
 
@@ -409,6 +410,37 @@
             </section>
         </div>
     </main>
+
+    <div id="popUpContainer" class="hidden">
+        <div class="popUp">
+            <h2>Sim, quero um curso completo e gratuito de programação web!</h2>
+
+            <div class="x">
+                <span class="first"></span><span class="second"></span>
+            </div>
+
+            <form action="" id="formRegister">
+                <fieldset form="formRegister" name="register">
+                    <span>
+                        <i class="ph ph-user"></i>
+                        <input required placeholder="Nome completo" type="text" name="name" id="name">
+                    </span>
+
+                    <span>
+                        <i class="ph ph-envelope-simple"></i>
+                        <input required placeholder="Seu melhor e-mail" type="email" name="email" id="email">
+                    </span>
+
+                    <span>
+                        <i class="ph ph-phone"></i>
+                        <input required placeholder="Insira seu DDD + telefone" type="tel" name="phoneNumber" id="phoneNumber">
+                    </span>
+
+                    <button type="submit">Iniciar Aprendizado</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>

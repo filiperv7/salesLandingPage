@@ -71,3 +71,22 @@ document.querySelector('.questionsContainer').addEventListener('click', (event) 
     }
 })
 
+
+// ================ PopUp Register ================ //
+
+document.querySelector('.buttonRegister').addEventListener('click', () => {
+    document.querySelector('#popUpContainer').classList.remove('hidden')
+    document.querySelector('#popUpContainer').classList.add('show')
+})
+
+document.querySelector('#popUpContainer').addEventListener('click', (event) => {
+    if (event.target.classList.contains('show')) {
+        document.querySelector('#popUpContainer').classList.add('hidden')
+        document.querySelector('#popUpContainer').classList.remove('show')
+    }
+})
+
+document.querySelector('.x').addEventListener('click', () => {
+    document.querySelector('#popUpContainer').classList.add('hidden')
+    document.querySelector('#popUpContainer').classList.remove('show')
+})
