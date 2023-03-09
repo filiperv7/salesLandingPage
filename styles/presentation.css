@@ -1,0 +1,53 @@
+main section#presentation {
+    border-bottom-left-radius: 5rem;
+    background-color: var(--colorPrimary);
+    
+    color: var(--textColorDefault);
+
+    margin-top: -1rem;
+}
+
+main section#presentation:target {
+    scroll-margin-top: 5rem;
+}
+
+main section#presentation > .pit {
+    max-width: 55%;
+}
+
+main section#presentation > img {
+    transform: rotate(-18deg);
+
+    height: 40rem;
+}
+
+.pit h1 {
+    font-size: 3.4rem;
+    line-height: 4rem;
+}
+
+.pit h1 strong {
+    color: var(--colorSecundary);
+}
+
+.pit p {
+    font-size: 1.4rem;
+}
+
+.pit button.register {
+    margin-top: 1.4rem;
+    padding: .8rem;
+
+    border: none;
+    border-radius: .6rem;
+
+    background-color: var(--colorSecundary);
+    color: var(--textColorDefault);
+
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+button.register a {
+    color: var(--textColorDefault);
+}
