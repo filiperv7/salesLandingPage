@@ -90,3 +90,10 @@ document.querySelector('.x').addEventListener('click', () => {
     document.querySelector('#popUpContainer').classList.add('hidden')
     document.querySelector('#popUpContainer').classList.remove('show')
 })
+
+
+// ================ Button Top ================ //
+
+document.querySelector('.top').addEventListener('click', () => {
+    window.scroll(0, 0)
+})

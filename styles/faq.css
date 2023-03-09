@@ -4,9 +4,6 @@
     align-items: start;
 
     background-color: var(--colorPrimary);
-
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
 }
 
 #faq p {
