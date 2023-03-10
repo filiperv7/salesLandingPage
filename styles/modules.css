@@ -54,9 +54,13 @@
     cursor: pointer;
     transition: box-shadow .7s linear;
 }
-.modulesContainer .shadow,
-.moduleTitle:hover {
+.modulesContainer .shadow {
     box-shadow: 0 2px 14px var(--shadowModule);
+}
+@media (hover: hover) {
+    .moduleTitle:hover {
+        box-shadow: 0 2px 14px var(--shadowModule);
+    }
 }
 
 i.ph-caret-down {
@@ -89,4 +93,22 @@ i.ph-caret-down {
 
 .contentModule ul li {
     font-weight: 500;
+}
+
+
+@media (max-width: 642px) {
+    .modulesContainer .moduleTitle {
+        padding: 1rem 2rem;
+    }
+}
+
+
+@media (max-width: 350px) {
+    main section#modules {
+        padding: 2rem 1rem;
+    }
+
+    .modulesContainer .moduleTitle {
+        padding: 1rem 1rem;
+    }
 }

@@ -74,3 +74,21 @@
 
     color: var(--textColorResponses);
 }
+
+@media (max-width: 790px) {
+    #faq {
+        flex-direction: column;
+    }
+
+    section#faq div.questionsContainer {
+        margin: 4rem auto 0;
+
+        width: 90%;
+    }
+}
+
+@media (max-width: 330px) {
+    section#faq div.questionsContainer {
+        width: 98%;
+    }
+}

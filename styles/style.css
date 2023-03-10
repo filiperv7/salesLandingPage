@@ -11,6 +11,8 @@
     --colorPrimary: #05112b;
     --colorSecundary: #1d5fee;
     --colorTerceary: #f55f44;
+
+    --phoneNavColor: #f55f44ce;
     
     --textColorDefault: #ffffff;
     --backgroundColor: #e2e8e8d5;
@@ -72,7 +74,7 @@ main header {
     top: 1rem;
     
     max-width: 1126px;
-    width: 98%;
+    width: 100%;
     padding: 1rem 6rem;
 
     background-color: var(--colorPrimary);
@@ -111,8 +113,38 @@ nav li a {
 
     transition: color .5s;
 }
-nav li a:hover {
-   color: var(--colorTerceary);
+@media (hover: hover) {
+    nav li a:hover {
+       color: var(--colorTerceary);
+    }
+}
+
+header nav.viewPhone ul.navigation {
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: .2rem;
+    right: 4.8rem;
+
+    gap: 2rem;
+
+    width: 30rem;
+    padding: 2rem;
+
+    background-color: var(--phoneNavColor);
+    border-radius: 8px;
+}
+
+.viewPhone .navigation li a {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    color: var(--colorPrimary);
+}
+
+ul.menu {
+    display: none;
 }
 
 div.sections {
@@ -163,7 +195,7 @@ footer .contentFooter {
 
     width: 90%;
 
-    padding: 0 1rem;
+    padding: .4 1.2rem;
 }
 
 footer .copyright {
@@ -199,7 +231,130 @@ footer .copyright {
     transition-property: color, border-color;
     transition-duration: .7s;
 }
-button.top:hover {
-    border-color: var(--colorSecundary);
-    color: var(--colorSecundary);
+@media (hover: hover) {
+    button.top:hover {
+        border-color: var(--colorSecundary);
+        color: var(--colorSecundary);
+    }
+}
+
+@media (max-width: 1180px) {
+    main, main header {
+        width: 92%;
+    }
+}
+
+@media (max-width: 810px) {
+    main header {
+        padding: .92rem 3.4rem;
+    }
+}
+
+@media (max-width: 760px) {
+    main > header ul.menu {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        
+        cursor: pointer;
+        
+        z-index: 12;
+    }
+    main > header ul.menu.x {
+        position: absolute;
+        right: 8.5rem;
+    }
+    main > header ul.menu.x li {
+        position: absolute;
+        
+        margin-right: 2rem;
+    }
+    main > header ul.menu.x li:nth-child(2) {
+        opacity: 0;
+    }
+    main > header ul.menu .first {
+        margin-top: -.3rem;
+    }
+    
+    main > header ul.menu li {
+        width: 2.8rem;
+        height: .3rem;
+    
+        background-color: var(--textColorDefault);
+    
+        border-radius: 4px;
+    
+        transition-property: transform;
+        transition-duration: .6s;
+    }
+    
+    main > header > nav {
+        display: none;
+    }
+    main nav.nav {
+        display: block;
+    }
+}
+
+@media (max-width: 710px) {
+    main footer {
+        height: 13rem;
+    }
+
+    main footer .divider {
+       margin-bottom: 2rem;
+    }
+
+    .contentFooter div.copyright {
+        position: absolute;
+
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width: 525px) {
+    main footer .copyright {
+       margin-top: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    main section {
+        padding: 2rem 4rem;
+    }
+}
+
+@media (max-width: 475px) {
+    main > header ul.menu.x {
+        right: 6rem;
+    }
+    
+    header nav.viewPhone ul.navigation {
+        right: 2.6rem;
+
+        width: 28rem;
+    }
+}
+
+@media (max-width: 425px) {
+    main, main header {
+        width: 96%;
+    }
+
+    main header {
+        padding: .92rem 3rem;
+    }
+}
+
+@media (max-width: 380px) {
+    :root {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 330px) {
+    main section {
+        padding: 2rem 3rem;
+    }
 }

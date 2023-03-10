@@ -42,19 +42,8 @@
     font-weight: 600;
 
     color: var(--priceColor);
-}
-
-.asideLeft .scrawl {
-    position: absolute;
-
-    width: 19.6rem;
-    height: .5rem;
-
-    background-color: var(--priceColor);
-
-    margin-top: -3.2rem;
-
-    transform: rotate(-2deg);
+    
+    text-decoration: line-through;
 }
 
 #register .cardRegister {
@@ -107,6 +96,62 @@
     transition: box-shadow .5s;
 }
 
-.cardRegister button:hover {
-    box-shadow: 1px 1px 16px var(--shadowButton);
+@media (hover: hover) {
+    .cardRegister button:hover {
+        box-shadow: 1px 1px 16px var(--shadowButton);
+    }
+}
+
+
+@media (max-width: 1045px) {
+    .asideLeft .oldPrice {
+        display: block;
+        width: 25.6rem;
+    }
+}
+
+@media (max-width: 790px) {
+    #register {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #register .asideLeft {
+        align-items: center;
+    }
+
+    #register .asideLeft h2, .asideLeft p {
+        text-align: center;
+    }
+
+    #register .asideLeft .oldPrice {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .cardRegister h2 {
+        display: block;
+        width: 19.2rem;
+
+        font-size: 2.4rem;
+    }
+
+    .cardRegister li {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (max-width: 360px) {
+    #register .cardRegister {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 330px) {
+    #register button.buttonRegister {
+        margin-bottom: 1.6rem;
+    }
 }

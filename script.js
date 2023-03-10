@@ -56,8 +56,6 @@ document.querySelector('.modulesContainer').addEventListener('click', (event) =>
 document.querySelector('.questionsContainer').addEventListener('click', (event) => {
     const question = event.target
 
-    console.log(question.closest('div.question').closest('div.questionContainer'));
-
     const questionscontainer = document.querySelectorAll('.questionContainer')
 
     questionscontainer.forEach(question => {
@@ -96,4 +94,14 @@ document.querySelector('.x').addEventListener('click', () => {
 
 document.querySelector('.top').addEventListener('click', () => {
     window.scroll(0, 0)
+})
+
+
+// ================ Button Top ================ //
+
+document.querySelector('.menu').addEventListener('click', () => {
+    document.querySelector('.navContainer').classList.toggle('nav')
+    document.querySelector('.navContainer').classList.toggle('viewPhone')
+
+    document.querySelector('.menu').classList.toggle('x')
 })

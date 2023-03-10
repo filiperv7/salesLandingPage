@@ -39,9 +39,10 @@
 
     cursor: pointer;
 }
-
-.card:hover {
-    animation: float ease-in-out 2s infinite;
+@media (hover: hover) {
+    .card:hover {
+        animation: float ease-in-out 2s infinite;
+    }
 }
 @keyframes float {
     0% {
@@ -168,4 +169,114 @@
     height: 13rem;
 
     margin-left: 3.5rem;
+}
+
+
+
+
+@media (min-width: 1136px) and (max-width: 1180px) {
+    #content .cards {
+        max-width: 64%;
+
+        gap: .8rem 3rem;
+    }
+}
+
+@media (max-width: 1136px) {
+    #content .cards {
+        max-width: 65%;
+
+        gap: .8rem 3rem;
+    }
+}
+
+@media (max-width: 1118px) {
+    #content .cards {
+        gap: .8rem 3.4rem;
+    }
+
+    #content > div:first-child {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 1096px) and (max-width: 1111px) {
+    #content .cards {
+        gap: .8rem 4.4rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1095px) {
+    #content .cards {
+        max-width: 58%;
+
+        gap: .8rem 3rem;
+    }
+}
+
+@media (max-width: 780px) {
+    #content {
+        padding: 2rem 4rem;
+    }
+
+    #content .cards {
+        gap: .8rem 2.8rem;
+    }
+}
+
+@media (max-width: 776px) {
+    #content .cards {
+        gap: .8rem 3.2rem;
+
+        scale: .97;
+    }
+}
+
+@media (max-width: 766px) {
+    #content .cards {
+        width: 70%;
+
+        gap: .8rem 4rem;
+    }
+}
+
+@media (max-width: 756px) {
+    #content .cards {
+        width: 68%;
+
+        gap: .8rem 4.4rem;
+    }
+}
+
+@media (max-width: 747px) {
+    #content .cards {
+        gap: .8rem 4.45rem;
+
+        scale: .92;
+    }
+}
+
+@media (max-width: 700px) {
+    #content {
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 656px) {
+    #content {
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 653px) {
+    #content .cards {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        margin-top: 2.5rem;
+
+        scale: 1;
+    }
 }
