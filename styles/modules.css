@@ -54,6 +54,10 @@
     cursor: pointer;
     transition: box-shadow .7s linear;
 }
+.moduleTitle h3>strong {
+    color: beige;
+}
+
 .modulesContainer .shadow {
     box-shadow: 0 2px 14px var(--shadowModule);
 }
@@ -85,14 +89,19 @@ i.ph-caret-down {
     transition: max-height .7s linear;
 }
 
-.contentModule ul {
-    padding: 1rem 2rem;
-
+.contentModule ol {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    
+    padding: 1rem 3rem;
     color: var(--textColorDefault);
 }
 
-.contentModule ul li {
+.contentModule ol li {
     font-weight: 500;
+
+    list-style: numeric;
 }
 
 

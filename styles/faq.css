@@ -68,7 +68,7 @@
     padding: 1rem .6rem;
 }
 
-.questionContainer .response li{
+.questionContainer .response {
     font-size: 1.4rem;
     font-weight: 400;
 
