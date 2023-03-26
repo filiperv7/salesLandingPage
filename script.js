@@ -57,12 +57,14 @@ document.querySelector('.questionsContainer').addEventListener('click', (event) 
     const question = event.target
 
     if (!question.closest('div.questionContainer').classList.contains('hideResponse')) {
-        question.closest('div.questionContainer').classList.add('hideResponse')
+        if (!question.classList.contains('response')) {
+            question.closest('div.questionContainer').classList.add('hideResponse')
+        }
     } else {
         const questionscontainer = document.querySelectorAll('.questionContainer')
         
         questionscontainer.forEach(question => {
-        if (!question.classList.contains('.hideResponse')) {
+        if (!question.classList.contains('hideResponse')) {
             question.classList.add('hideResponse')
         }
         })
