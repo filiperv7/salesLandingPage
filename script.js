@@ -56,16 +56,20 @@ document.querySelector('.modulesContainer').addEventListener('click', (event) =>
 document.querySelector('.questionsContainer').addEventListener('click', (event) => {
     const question = event.target
 
-    const questionscontainer = document.querySelectorAll('.questionContainer')
-
-    questionscontainer.forEach(question => {
+    if (!question.closest('div.questionContainer').classList.contains('hideResponse')) {
+        question.closest('div.questionContainer').classList.add('hideResponse')
+    } else {
+        const questionscontainer = document.querySelectorAll('.questionContainer')
+        
+        questionscontainer.forEach(question => {
         if (!question.classList.contains('.hideResponse')) {
-                question.classList.add('hideResponse')
+            question.classList.add('hideResponse')
         }
-    })
-    
-    if (question.classList.contains('question') || question.closest('div.question')) {
-        question.closest('div.question').closest('div.questionContainer').classList.remove('hideResponse')
+        })
+        
+        if (question.classList.contains('question') || question.closest('div.question')) {
+            question.closest('div.question').closest('div.questionContainer').classList.remove('hideResponse')
+        }
     }
 })
 
@@ -97,7 +101,7 @@ document.querySelector('.top').addEventListener('click', () => {
 })
 
 
-// ================ Button Top ================ //
+// ================ Navigation ================ //
 
 document.querySelector('.menu').addEventListener('click', () => {
     document.querySelector('.navContainer').classList.toggle('nav')
