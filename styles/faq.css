@@ -87,6 +87,18 @@
     }
 }
 
+@media (max-width: 563px) {
+    .questionsContainer .wrap1.hideResponse {
+        max-height: 5.3rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .questionsContainer .wrap2.hideResponse {
+        max-height: 5.3rem;
+    }
+}
+
 @media (max-width: 330px) {
     section#faq div.questionsContainer {
         width: 98%;
